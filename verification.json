@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-09-29T12:34:24Z",
+  "probeId": "a2d08f78-0a58-4831-8431-ff228edfc410",
+  "nestedMatching": "passed",
+  "stats": {
+    "opensearch": 1000005,
+    "pendingOutbox": 0,
+    "mongo": 1000005
+  },
+  "seed": {
+    "running": false,
+    "inserted": 1000000,
+    "target": 1000000,
+    "error": null
+  }
+}

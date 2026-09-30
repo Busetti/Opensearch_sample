@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-09-29T12:37:41Z",
+  "kafkaOutageMongoCommit": "passed",
+  "pendingEventSurvivesAppRestart": "passed",
+  "indexedExactlyOneDocument": "passed",
+  "employeeId": "480e0eca-411b-48f3-9bd7-a7c142066855",
+  "stats": {
+    "pendingOutbox": 0,
+    "opensearch": 1000006,
+    "mongo": 1000006
+  },
+  "relay": {
+    "state": "STREAMING",
+    "deliveredSinceStart": 1,
+    "historyRecoveries": 0,
+    "lastCheckpointAt": "2026-09-29T12:37:41.127882417Z",
+    "lastError": null
+  }
+}

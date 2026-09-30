@@ -1,0 +1,28 @@
+spring:
+  mongodb:
+    uri: ${SPRING_MONGODB_URI:mongodb://localhost:27017/employees?replicaSet=rs0&directConnection=true&w=majority}
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: employee-indexer
+      auto-offset-reset: earliest
+      max-poll-records: 500
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      acks: all
+      properties:
+        enable.idempotence: true
+        linger.ms: 10
+        compression.type: lz4
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+app:
+  opensearch-url: ${APP_OPENSEARCH_URL:http://localhost:9200}
+  topic: employees.changed
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
